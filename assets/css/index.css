@@ -246,7 +246,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 10px;
+    gap: 10px;git add -A
+    
 }
 
 #app .card.post .postInfo .text,
