@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+  --body-bg-color: #22212C;
+  --text-color: #837E9F;
+  --bg-cards: #302F3D;
+  --bg-techs: #ff3232;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--body-bg-color);
+    margin: 0;
+    font-family: 'Merriweather Sans', sans-serif;
+}
+
+#app {
+    padding: 20px 40px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+#app .left {
+    width: 30%;
+    float: left;
+}
+
+#app .left .card {
+    width: 100%;
+    padding: 30px;
+    color: var(--text-color);
+    float: left;
+}
+
+#app .left .card h3 {
+    font-weight: 900;
+    margin-bottom: -5px;
+}
+
+#app .left .card .rank {
+    font-size: 13px;
+}
+
+#app .left .card:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+#app .left .card .avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: var(--body-bg-color);
+    background-size: cover;
+    background-position: center center;
+    border: 3px solid var(--body-bg-color);
+    box-shadow: 0 0 0 2px var(--bg-techs);
+}
+
+#app .left .card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#app .left .card ul li {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+#app .left .card ul li span {
+    padding: 0 20px;
+    font-size: 15px;
+}
+
+#app .card {
+    background-color: var(--bg-cards);
+    border-radius: 15px;
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.349);
+    margin-bottom: 40px;
+}
+
+#app .card:last-child {
+    margin-bottom: 0;
+}
+
+#app .card .technologies {
+    padding: 20px 0;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#app .card .technologies .progress {
+    width: 100%;
+    height: 20px;
+    background-color: var(--body-bg-color);
+    border-radius: 5px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+#app .card .technologies .progress .bar {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: var(--bg-techs);
+    border-radius: 5px;
+    padding: 2px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: white;
+}
+
+#app .card .technologies .progress .bar img {
+    width: 15px;
+}
+
+#app .card .technologies .progress .bar .technologie {
+    font-size: 12px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+}
+
+#app .card .technologies .progress .bar .technologie img {
+    margin-right: 4px;
+}
+
+#app .card img.icon {
+    filter: invert(48%) sepia(18%) saturate(435%) hue-rotate(209deg) brightness(102%) contrast(98%);
+}
+
+#app .right  {
+    width: 75%;
+}
+
+#app .right .card {
+    width: 100%;
+    padding: 10px 20px;
+    color: var(--text-color);
+}
+
+.pDefault {
+    padding: 20px !important;
+}
+
+#app .right .card header {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 10px 0 ;
+}
+
+#app .right .card header span {
+    font-size: 14px;
+}
+
+#app .right .card h4 {
+    display: flex;
+    align-items: center;
+}
+
+#app .right .card h4 span {
+    padding: 0 10px;
+}
+
+#app .right .card p {
+    padding: 20px 0;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+#app .right .card .bottom {
+    font-size: 11px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#app .right .card .bottom h4 img {
+    width: 15px;
+    margin-right: -5px;
+}
+
+#app .right .card .bottom h4 span {
+    padding-left: 10px;
+}
+
+#app .right .card .bottom h5  {
+    float: left;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#app .right .card .bottom h5 span .circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--bg-techs);
+    float: left;
+    border: 1px solid var(--text-color);
+}
+
+#app .card.post .postAvatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    background-color: var(--body-bg-color);
+    background-size: cover;
+    background-position: center center;
+}
+
+#app .card.post {
+    display: flex;
+    gap: 20px;
+}
+
+#app .card.post .postInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+#app .card.post .postInfo .text,
+#app .card.post .postInfo .years {
+    font-size: 13px !important;
+    font-weight: normal !important;
+    padding: 0 0;
+}
+
+#app .card.post .postInfo .text p{
+    padding: 0 0;
+    font-size: 13px !important;
+    font-weight: normal !important;
+    margin-bottom: 5px;
+}
+#app .card.post .postInfo .text p.tags {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 0;
+}
+#app .card.post .postInfo .text p.tags span {
+    background-color: var(--body-bg-color);
+    padding: 3px 5px;
+    border-radius: 5px;
+}
+#app .card.post .postInfo .text p.tags span::before {
+    content: "#";
+    padding-right: 5px;
+    font-size: 12px;
+}
